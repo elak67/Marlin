@@ -1251,7 +1251,7 @@
   /**
    * Enable the G26 Mesh Validation Pattern tool.
    */
-  //#define G26_MESH_VALIDATION
+  #define G26_MESH_VALIDATION
   #if ENABLED(G26_MESH_VALIDATION)
     #define MESH_TEST_NOZZLE_SIZE    0.4  // (mm) Diameter of primary nozzle.
     #define MESH_TEST_LAYER_HEIGHT   0.2  // (mm) Default layer height for the G26 Mesh Validation Tool.
@@ -1348,7 +1348,7 @@
  * Useful to retract or move the Z probe out of the way.
  */
 //#define Z_PROBE_END_SCRIPT "G1 Z10 F12000\nG1 X15 Y330\nG1 Z0.5\nG1 Z10"
-#define Z_PROBE_END_SCRIPT "G1 Z10 F12000\nG1 X0 Y0 "
+#define Z_PROBE_END_SCRIPT "G1 Z10 F12000\nG1 X-17 Y-25 "
 
 // @section homing
 
@@ -1357,8 +1357,10 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-#define MANUAL_X_HOME_POS TRONXY_X_BED_OFFSET // The X3A has a standard X offset (17mm) between the left endstop and bed left bed edge
-#define MANUAL_Y_HOME_POS TRONXY_Y_BED_OFFSET // The X3A has a standard Y offset (25mm) between the y endstop and the front bet edge
+//#define MANUAL_X_HOME_POS TRONXY_X_BED_OFFSET // The X3A has a standard X offset (17mm) between the left endstop and bed left bed edge
+//#define MANUAL_Y_HOME_POS TRONXY_Y_BED_OFFSET // The X3A has a standard Y offset (25mm) between the y endstop and the front bet edge
+#define MANUAL_X_HOME_POS -17 // The X3A has a standard X offset (17mm) between the left endstop and bed left bed edge
+#define MANUAL_Y_HOME_POS -25 // The X3A has a standard Y offset (25mm) between the y endstop and the front bet edge
 #define MANUAL_Z_HOME_POS 0
 
 // Use "Z Safe Homing" to avoid homing with a Z probe outside the bed area.
