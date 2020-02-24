@@ -134,7 +134,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "MyTX3_M2v0.1.0a"
+#define CUSTOM_MACHINE_NAME "MyTX3_M2v0.1.0b"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -914,7 +914,7 @@
  */
 #define TOUCH_MI_PROBE
 #if ENABLED(TOUCH_MI_PROBE)
-  #define TOUCH_MI_RETRACT_Z 0.5                  // Height at which the probe retracts
+  #define TOUCH_MI_RETRACT_Z 0.35                  // Height at which the probe retracts
   //#define TOUCH_MI_DEPLOY_XPOS (X_MAX_BED + 2)  // For a magnet on the right side of the bed
   #define TOUCH_MI_MANUAL_DEPLOY                // For manual deploy (LCD menu)
 #endif
