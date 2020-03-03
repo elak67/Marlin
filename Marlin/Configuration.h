@@ -130,11 +130,12 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD  BOARD_RAMPS_14_EFB  //63
+  #define MOTHERBOARD  BOARD_GT2560_REV_A 
+  //#define MOTHERBOARD  BOARD_RAMPS_14_EFB  //63
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "MyTX3_M2v0.1.0b"
+#define CUSTOM_MACHINE_NAME "MyTX3_M2v0.1.1c"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -696,7 +697,7 @@
 //#define Z2_DRIVER_TYPE A4988
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
-#define E0_DRIVER_TYPE DRV8825
+#define E0_DRIVER_TYPE A4988  
 //#define E1_DRIVER_TYPE A4988
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
@@ -1058,8 +1059,8 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false
-#define INVERT_Y_DIR false
+#define INVERT_X_DIR true
+#define INVERT_Y_DIR true
 //#define INVERT_Z_DIR true //
 #define INVERT_Z_DIR false 
 // @section extruder
